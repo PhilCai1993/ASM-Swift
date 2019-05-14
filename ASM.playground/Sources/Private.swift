@@ -305,30 +305,30 @@ class Math {
         
         switch v {
         case is Int:
-            return Address(truncatingBitPattern: v as! Int)
+            return Address(v as! Int)
             
         case is Int16:
-            return Address(truncatingBitPattern: v as! Int16)
+            return Address(v as! Int16)
         case is Int32:
-            return Address(truncatingBitPattern: v as! Int32)
+            return Address(v as! Int32)
         case is Int64:
-            return Address(truncatingBitPattern: v as! Int64)
+            return Address(v as! Int64)
             
         case is UInt:
-            return Address(truncatingBitPattern: v as! UInt)
+            return Address(v as! UInt)
         case is UInt8:
             return v as! UInt8
         case is UInt16:
-            return Address(truncatingBitPattern: v as! UInt16)
+            return Address(v as! UInt16)
         case is UInt32:
-            return Address(truncatingBitPattern: v as! UInt32)
+            return Address(v as! UInt32)
         case is UInt64:
-            return Address(truncatingBitPattern: v as! UInt64)
+            return Address(v as! UInt64)
             
         case is Float32:
-            return Address(truncatingBitPattern: unsafeBitCast(v as! Float32, to: Int32.self))
+            return Address(unsafeBitCast(v as! Float32, to: Int32.self))
         case is Float64:
-            return Address(truncatingBitPattern: unsafeBitCast(v as! Float64, to: Int64.self))
+            return Address(unsafeBitCast(v as! Float64, to: Int64.self))
             
         default:
             return unsafeBitCast(v, to: Address.self)
